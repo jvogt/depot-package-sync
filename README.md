@@ -9,6 +9,8 @@ hab pkg install jvogt/depot-package-sync -b
 
 ## Usage
 ```
+hab studio enter
+hab pkg install jvogt/depot-package-sync -b
 TOKEN="abcd1234..."
 URL="https://jv-hab-depot.chef-demo.com"
 depot-package-sync --onprem-token "${TOKEN}" --onprem-url "${URL}" --package <package ident>
@@ -16,6 +18,8 @@ depot-package-sync --onprem-token "${TOKEN}" --onprem-url "${URL}" --package <pa
 
 ## Example of performing a bulk sync from a file
 ```
+hab studio enter
+hab pkg install jvogt/depot-package-sync -b
 TOKEN="abcd1234..."
 URL="https://jv-hab-depot.chef-demo.com"
 while read PACKAGE; do 
