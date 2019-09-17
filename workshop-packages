@@ -3,3 +3,4 @@ chef/scaffolding-chef-infra
 chef/scaffolding-chef-inspec
 chef/inspec
 core/cacerts/2019.09.16
+stuartpreston/chef-client
