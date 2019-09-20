@@ -40,7 +40,7 @@ export HAB_ORIGIN=core
 unset HAB_AUTH_TOKEN
 
 echo "Downloading ${PACKAGE}"
-OUTPUT=$(hab pkg install ${PACKAGE} | tee /dev/tty)
+OUTPUT=$(hab pkg install ${PACKAGE} --ignore-install-hook | tee /dev/tty)
 P_IDENT=$(echo ${OUTPUT} | grep 'Install of' | sed -r 's/.*Install of (.*) complete.*/\1/')
 if [ -z "${P_IDENT}" ]; then
   echo "Download Failed"

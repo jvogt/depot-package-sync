@@ -18,7 +18,7 @@ function Depot-Package-Sync {
     remove-item env:HAB_AUTH_TOKEN -ErrorAction Ignore
 
     write-host "Downloading $PACKAGE"
-    hab pkg install $PACKAGE | Tee-Object -Variable OUTPUT
+    hab pkg install $PACKAGE --ignore-install-hook | Tee-Object -Variable OUTPUT
     $p_ident = $OUTPUT | Select-String -Pattern 'Install of (.*?) ' -AllMatches | % { $_.matches.groups[1].value }
     if ($p_ident -eq $null) {
       write-host "Package download failed."
