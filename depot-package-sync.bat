@@ -1,0 +1,1 @@
+powershell.exe -command "%~dp0depot-package-sync.ps1 %*"

@@ -10,7 +10,8 @@ function invoke-build { }
 
 function invoke-install {
   mkdir $pkg_prefix\bin -force
-  copy-item $PLAN_CONTEXT\depot-package-sync.psm1 $pkg_prefix\bin -force
+  copy-item $PLAN_CONTEXT\depot-package-sync.ps1 $pkg_prefix\bin -force
+  copy-item $PLAN_CONTEXT\depot-package-sync.bat $pkg_prefix\bin -force
   copy-item $PLAN_CONTEXT\workshop-packages $pkg_prefix\ -force
   copy-item $PLAN_CONTEXT\README.md $pkg_prefix\ -force
 }
