@@ -12,7 +12,7 @@ do_build() {
 
 do_install() {
   mkdir -p $pkg_prefix/bin
-  cp depot-package-sync $pkg_prefix/bin
+  cp $PLAN_CONTEXT/depot-package-sync.sh $pkg_prefix/bin/depot-package-sync
   chmod +x $pkg_prefix/bin/depot-package-sync
-  cp workshop-packages README.md $pkg_prefix/
+  cp $PLAN_CONTEXT/workshop-packages $PLAN_CONTEXT/README.md $pkg_prefix/
 }

@@ -12,7 +12,6 @@ OPTS=`getopt -o t:u:p: --longoptions onprem-token:,onprem-url:,package: -n 'pars
 
 if [ $? != 0 ] ; then echo "Failed parsing options." >&2 ; exit 1 ; fi
 
-#echo "$OPTS"
 eval set -- "$OPTS"
 
 TOKEN=''
